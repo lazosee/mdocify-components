@@ -1,22 +1,54 @@
 {
-  "name": "mdocify-components",
+  "name": "@mdocify/components",
   "version": "0.0.1",
   "type": "module",
+  "description": "",
   "exports": {
-    ".": "./index.ts"
+    ".": "./index.ts",
+    "./callout.astro": "./src/callout.astro",
+    "./icon.astro": "./src/icon.astro",
+    "./types": "./src/types.ts",
+    "./icons": "./src/icons.ts"
   },
   "files": [
     "src",
-    "index.ts"
+    "index.ts",
+    "index.d.ts",
+    "README.md",
+    "LICENSE"
   ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "keywords": [
-    "astro-component"
+    "astro-component",
+    "mdocify",
+    "markdoc",
+    "components",
+    "markdoc components"
   ],
   "scripts": {},
   "devDependencies": {
-    "astro": "^5.16.6"
+    "astro": "^5.16.6",
+    "@lucide/astro": "^0.562.0"
   },
   "peerDependencies": {
-    "astro": "^4.0.0 || ^5.0.0"
+    "astro": "^4.0.0 || ^5.0.0",
+    "@lucide/astro": "^0.562.0"
+  },
+  "dependencies": {
+  },
+  "author": "Lazaro Osee <oseelazaro@gmail.com> (https://www.lazaroosee.xyz)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lazosee/mdocify-components.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lazosee/mdocify-components/issues"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   }
 }
