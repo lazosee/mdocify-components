@@ -1,10 +1,8 @@
 ---
 import Icon from './icon.astro';
+import type { CalloutProps } from './types';
 
-interface Props {
-    title: string;
-    type: "tip" | "warning" | "danger" | "success";
-}
+interface Props extends CalloutProps {}
 const { title, type } = Astro.props;
 
 const icon = type === "danger" ? "triangle-alert" :  type ==="success" ? "circle-check" :  type === 'warning' ? 'circle-alert' : 'lightbulb'
