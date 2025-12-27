@@ -9,18 +9,18 @@ const icon = type === "danger" ? "triangle-alert" :  type ==="success" ? "circle
 ---
 
 <div class:list={[
-    'not-prose block m-1 border border-spacing-1.5 overflow-hidden rounded-xl [corner-shape:squircle]',
-    {'border-teal-700!': type === 'tip'},
-    {'border-orange-700!': type === 'warning'},
-    {'border-red-700!': type === 'danger'},
-    {'border-green-700!': type === 'success'}
+    'callout',
+    {'callout-tip': type === 'tip'},
+    {'callout-warning': type === 'warning'},
+    {'callout-danger': type === 'danger'},
+    {'callout-success': type === 'success'}
 ]}>
     <div class:list={[
-        'not-prose flex font-semibold p-2 gap-2 justify-start items-center text-white',
-        {'bg-teal-500!': type === 'tip'},
-        {'bg-orange-500!': type === 'warning'},
-        {'bg-red-500!': type === 'danger'},
-        {'bg-green-500!': type === 'success'}
+        'callout-header',
+        {'callout-header-tip': type === 'tip'},
+        {'callout-header-warning': type === 'warning'},
+        {'callout-header-danger': type === 'danger'},
+        {'callout-header-success': type === 'success'}
     ]}>
         <slot name="icon">
             <Icon name={icon} class="w-8" />
@@ -37,3 +37,48 @@ const icon = type === "danger" ? "triangle-alert" :  type ==="success" ? "circle
         <slot></slot>
     </div>
 </div>
+
+<style>
+    .callout {
+        display: block;
+        margin: 0.25rem;
+        border: 0.02rem solid;
+        border-spacing: 1.5rem;
+        overflow: hidden;
+        border-radius: 0.75rem;
+        corner-shape: squircle;
+    }
+    .callout-header {
+        display: flex;
+        font-weight: 500;
+        padding: 0.5rem;
+        gap: 0.5rem;
+        justify-content: start;
+        align-items: center;
+        color: white;
+    }
+    .callout-tip {
+        border-color: teal;
+    }
+    .callout-warning {
+        border-color: orange;
+    }
+    .callout-success {
+        border-color: green;
+    }
+    .callout-danger {
+        border-color: red;
+    }
+    .callout-header-tip {
+        background-color: teal;
+    }
+    .callout-header-warning {
+        background-color: orange;
+    }
+    .callout-header-success {
+        background-color: green;
+    }
+    .callout-header-danger {
+        background-color: red;
+    }
+</style>
