@@ -10,17 +10,17 @@ const icon = type === "danger" ? "triangle-alert" :  type ==="success" ? "circle
 
 <div class:list={[
     'not-prose block m-1 border border-spacing-1.5 overflow-hidden rounded-xl [corner-shape:squircle]',
-    {'border-teal-700': type === 'tip'},
-    {'border-orange-700': type === 'warning'},
-    {'border-red-700': type === 'danger'},
-    {'border-green-700': type === 'success'}
+    {'border-teal-700!': type === 'tip'},
+    {'border-orange-700!': type === 'warning'},
+    {'border-red-700!': type === 'danger'},
+    {'border-green-700!': type === 'success'}
 ]}>
     <div class:list={[
-        'flex font-semibold p-2 gap-2 justify-start items-center text-white',
-        {'bg-teal-500': type === 'tip'},
-        {'bg-orange-500': type === 'warning'},
-        {'bg-red-500': type === 'danger'},
-        {'bg-green-500': type === 'success'}
+        'not-prose flex font-semibold p-2 gap-2 justify-start items-center text-white',
+        {'bg-teal-500!': type === 'tip'},
+        {'bg-orange-500!': type === 'warning'},
+        {'bg-red-500!': type === 'danger'},
+        {'bg-green-500!': type === 'success'}
     ]}>
         <slot name="icon">
             <Icon name={icon} class="w-8" />
