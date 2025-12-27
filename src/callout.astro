@@ -9,7 +9,7 @@ const icon = type === "danger" ? "triangle-alert" :  type ==="success" ? "circle
 ---
 
 <div class:list={[
-    'block m-1 border border-spacing-1.5 overflow-hidden rounded-xl [corner-shape:squircle]',
+    'not-prose block m-1 border border-spacing-1.5 overflow-hidden rounded-xl [corner-shape:squircle]',
     {'border-teal-700': type === 'tip'},
     {'border-orange-700': type === 'warning'},
     {'border-red-700': type === 'danger'},
